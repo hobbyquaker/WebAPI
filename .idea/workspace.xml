@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a91d093-432a-4ba8-9ce8-ac602583d045" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/WebAPI.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api_auth/hmscript.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api_auth/process.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api_auth/tclscript.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api_auth/xmlrpc.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/generate_img.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/update_script" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/webapi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/version.cgi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api_auth/version.cgi" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dev/webapi" afterPath="$PROJECT_DIR$/dev/hq-webapi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_img.sh" afterPath="$PROJECT_DIR$/dev/generate_img.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_img_auth.sh" afterPath="$PROJECT_DIR$/dev/generate_img_auth.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/update_script" afterPath="$PROJECT_DIR$/dev/update_script" />
     </list>
     <ignored path="WebAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +31,25 @@
       <file leaf-file-name="generate_img.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/generate_img.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="0" selection-end="146" vertical-scroll-proportion="0.0">
+            <state line="6" column="10" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.cgi" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/version.cgi">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="38" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.cgi" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api_auth/version.cgi">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="34" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0931677">
               <folding />
             </state>
           </provider>
@@ -49,16 +58,25 @@
       <file leaf-file-name="generate_img_auth.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/generate_img_auth.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+            <state line="8" column="3" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hmscript.cgi" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api_auth/hmscript.cgi">
+      <file leaf-file-name="update_script" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/update_script">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="16" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+            <state line="7" column="33" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hq-webapi" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/hq-webapi">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="6" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,7 +94,7 @@
       <file leaf-file-name="tclscript.cgi" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api_auth/tclscript.cgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="14" selection-end="37" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1408" selection-end="1469" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,37 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hmscript.cgi" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hmscript.cgi" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/hmscript.cgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="33" selection-start="494" selection-end="494" vertical-scroll-proportion="0.2795031">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process.cgi" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/process.cgi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tclscript.cgi" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/tclscript.cgi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="34" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xmlrpc.cgi" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/xmlrpc.cgi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="44" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+            <state line="12" column="33" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,9 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/dev/update_script" />
-        <option value="$PROJECT_DIR$/dev/generate_img.sh" />
-        <option value="$PROJECT_DIR$/dev/generate_img_auth.sh" />
         <option value="$PROJECT_DIR$/api_auth/tclscript.cgi" />
         <option value="$PROJECT_DIR$/api/xmlrpc.cgi" />
         <option value="$PROJECT_DIR$/api/tclscript.cgi" />
@@ -151,6 +139,12 @@
         <option value="$PROJECT_DIR$/api_auth/hmscript.cgi" />
         <option value="$PROJECT_DIR$/api_auth/process.cgi" />
         <option value="$PROJECT_DIR$/api_auth/xmlrpc.cgi" />
+        <option value="$PROJECT_DIR$/dev/generate_img.sh" />
+        <option value="$PROJECT_DIR$/dev/update_script" />
+        <option value="$PROJECT_DIR$/dev/hq-webapi" />
+        <option value="$PROJECT_DIR$/dev/generate_img_auth.sh" />
+        <option value="$PROJECT_DIR$/api/version.cgi" />
+        <option value="$PROJECT_DIR$/api_auth/version.cgi" />
       </list>
     </option>
   </component>
@@ -284,6 +278,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api_auth" />
       <recent name="$PROJECT_DIR$/api" />
     </key>
   </component>
@@ -300,7 +295,11 @@
       <created>1360393225353</created>
       <updated>1360393225353</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.0 - see Readme">
+      <created>1360393241431</created>
+      <updated>1360393241431</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -382,27 +381,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dev/update_script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_img.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="0" selection-end="146" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/generate_img_auth.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/xmlrpc.cgi">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="44" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
@@ -445,16 +423,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api_auth/tclscript.cgi">
+    <entry file="file://$PROJECT_DIR$/api/hmscript.cgi">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="14" selection-end="37" vertical-scroll-proportion="0.0">
+        <state line="12" column="33" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/hmscript.cgi">
+    <entry file="file://$PROJECT_DIR$/dev/update_script">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="494" selection-end="494" vertical-scroll-proportion="0.2795031">
+        <state line="7" column="33" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/hq-webapi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="6" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/generate_img_auth.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="3" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/generate_img.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="10" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api_auth/tclscript.cgi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1408" selection-end="1469" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/version.cgi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="38" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api_auth/version.cgi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0931677">
           <folding />
         </state>
       </provider>

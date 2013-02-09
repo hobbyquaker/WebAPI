@@ -3,8 +3,8 @@
 mkdir -p /mnt
 mount -t yaffs /dev/mtdblock3 /mnt
 
-cp -R ./api /mnt/etc/config/addons/www/
-cp ./webapi /mnt/etc/config/rc.d/
-chmod +x /mnt/etc/config/rc.d/webapi
+cp -R ./webapi /mnt/etc/config/addons/www/
+cp ./hq-webapi /mnt/etc/config/rc.d/
+chmod +x /mnt/etc/config/rc.d/hq-webapi
 
 umount /mnt
