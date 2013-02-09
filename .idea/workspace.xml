@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a91d093-432a-4ba8-9ce8-ac602583d045" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/version.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api_auth/version.cgi" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dev/webapi" afterPath="$PROJECT_DIR$/dev/hq-webapi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapi_1.0.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapi_auth_1.0.tar.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_img.sh" afterPath="$PROJECT_DIR$/dev/generate_img.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/generate_img_auth.sh" afterPath="$PROJECT_DIR$/dev/generate_img_auth.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/update_script" afterPath="$PROJECT_DIR$/dev/update_script" />
     </list>
     <ignored path="WebAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,10 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.cgi" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="version.cgi" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api_auth/version.cgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="34" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0931677">
+            <state line="4" column="34" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="75" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.45166403">
               <folding />
             </state>
           </provider>
@@ -77,15 +84,6 @@
         <entry file="file://$PROJECT_DIR$/dev/hq-webapi">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="6" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process.cgi" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api_auth/process.cgi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="15" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,6 +143,7 @@
         <option value="$PROJECT_DIR$/dev/generate_img_auth.sh" />
         <option value="$PROJECT_DIR$/api/version.cgi" />
         <option value="$PROJECT_DIR$/api_auth/version.cgi" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -299,7 +298,11 @@
       <created>1360393241431</created>
       <updated>1360393241431</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.0 - see Readme">
+      <created>1360393765527</created>
+      <updated>1360393765527</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -474,7 +477,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api_auth/version.cgi">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="34" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0931677">
+        <state line="4" column="34" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="75" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.45166403">
           <folding />
         </state>
       </provider>
