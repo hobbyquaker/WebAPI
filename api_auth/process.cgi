@@ -1,7 +1,5 @@
 #!/bin/tclsh
 
-#   WebAPI Version 1.0
-#
 #   process.cgi
 #   Ausführen eines Prozesses
 #   11'2012 https://github.com/hobbyquaker

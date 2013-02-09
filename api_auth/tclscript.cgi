@@ -1,7 +1,5 @@
 #!/bin/tclsh
 
-#   WebAPI Version 1.0
-#
 #   tclscript.cgi
 #   Ausführen eines TCL Scripts
 #   11'2012 https://github.com/hobbyquaker

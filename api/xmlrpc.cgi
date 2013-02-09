@@ -1,7 +1,5 @@
 #!/bin/tclsh
 
-#   WebAPI Version 1.0
-#
 #   xmlrpc.cgi
 #   Proxy für Zugriff auf XMLRPC via Port 80
 #   11'2012 https://github.com/hobbyquaker
@@ -34,5 +32,6 @@ set url "http://127.0.0.1:$port/"
 set token [::http::geturl $url -query $postdata]
 set response [::http::data $token]
 puts "Access-Control-Allow-Origin: *"
+puts ""
 puts $response
 

@@ -8,7 +8,7 @@ case "$1" in
 
 	info)
         echo "Info: <b>WebAPI</b>"
-        echo "Info: <b>ohne</b> Authentifizierung"
+        echo "Info: mit Authentifizierung"
         echo "Name: WebAPI"
         echo "Version: 0.9.0"
         echo "Operations: uninstall"

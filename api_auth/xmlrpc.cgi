@@ -1,7 +1,5 @@
 #!/bin/tclsh
 
-#   WebAPI Version 1.0
-#
 #   xmlrpc.cgi
 #   Proxy für Zugriff auf XMLRPC via Port 80
 #   11'2012 https://github.com/hobbyquaker
@@ -12,7 +10,13 @@
 #       Beispielaufruf: xmlrpc.cgi?port=2001&session=Hza3fjs8
 #
 #   Ein Aufruf mit einer ungültigen Session wird mit folgender XML-Ausgabe quittiert:
-#       <response><error message="session invalid"/></response>
+#
+#        <methodResponse>
+#            <fault><value><struct>
+#                <member><name>faultCode</name><value><i4>-1337</i4></value></member>
+#                <member><name>faultString</name><value>Session invalid</value></member>
+#            </struct></value></fault>
+#        </methodResponse>
 #
 
 load tclrega.so
@@ -39,11 +43,15 @@ if {$res != ""} {
         set token [::http::geturl $url -query $postdata]
         set response [::http::data $token]
         puts "Access-Control-Allow-Origin: *"
+        puts ""
         puts $response
     }
 } else {
         puts {Content-Type: text/xml;Charset=ISO-8859-1
         Access-Control-Allow-Origin: *
 
-        <?xml version="1.0"?><response><error message="session invalid"/></response>}
+        <?xml version="1.0"?>
+        <methodResponse><fault>
+            <value><struct><member><name>faultCode</name><value><i4>-1337</i4></value></member><member><name>faultString</name><value>Session invalid</value></member></struct></value>
+        </fault></methodResponse>}
 }

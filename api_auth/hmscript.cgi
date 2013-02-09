@@ -1,7 +1,5 @@
 #!/bin/tclsh
 
-#   WebAPI Version 1.0
-#
 #   hmscript.cgi
 #   Ausführen eines Homematic Scripts
 #   11'2012 https://github.com/hobbyquaker
