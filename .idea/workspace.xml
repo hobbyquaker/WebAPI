@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a91d093-432a-4ba8-9ce8-ac602583d045" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/hq-webapi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/update_script" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/webapi/hmscript.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/webapi/process.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/webapi/tclscript.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/webapi/version.cgi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/webapi/xmlrpc.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi_1.0.tar.gz" afterPath="$PROJECT_DIR$/webapi_1.0.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi_auth_1.0.tar.gz" afterPath="$PROJECT_DIR$/webapi_auth_1.0.tar.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/hmscript.cgi" afterPath="$PROJECT_DIR$/api/hmscript.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/process.cgi" afterPath="$PROJECT_DIR$/api/process.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/tclscript.cgi" afterPath="$PROJECT_DIR$/api/tclscript.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/version.cgi" afterPath="$PROJECT_DIR$/api/version.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/xmlrpc.cgi" afterPath="$PROJECT_DIR$/api/xmlrpc.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api_auth/hmscript.cgi" afterPath="$PROJECT_DIR$/api_auth/hmscript.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api_auth/process.cgi" afterPath="$PROJECT_DIR$/api_auth/process.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api_auth/tclscript.cgi" afterPath="$PROJECT_DIR$/api_auth/tclscript.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api_auth/version.cgi" afterPath="$PROJECT_DIR$/api_auth/version.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api_auth/xmlrpc.cgi" afterPath="$PROJECT_DIR$/api_auth/xmlrpc.cgi" />
     </list>
     <ignored path="WebAPI.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea" />
+    <ignored path=".idea/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +45,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="2" selection-start="700" selection-end="700" vertical-scroll-proportion="0.35657686">
+            <state line="24" column="0" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.57052296">
               <folding />
             </state>
           </provider>
@@ -261,7 +243,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="web.server" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hq-xmlapi" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -301,6 +283,24 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <created>1360392364932</created>
@@ -322,7 +322,15 @@
       <created>1360394182513</created>
       <updated>1360394182513</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.0 - see Readme">
+      <created>1360394617415</created>
+      <updated>1360394617415</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.0 - see Readme">
+      <created>1360394819474</created>
+      <updated>1360394819475</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -504,7 +512,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="700" selection-end="700" vertical-scroll-proportion="0.35657686">
+        <state line="24" column="0" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.57052296">
           <folding />
         </state>
       </provider>
