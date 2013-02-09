@@ -28,16 +28,11 @@ catch {
 
 set postdata [read stdin]
 
-set res [lindex [rega_script "Write(system.GetSessionVarStr('$session'));"] 1]
-if {$res != ""} {
-        package require http
-        set url "http://127.0.0.1:$port/"
-        set token [::http::geturl $url -query $postdata]
-        set response [::http::data $token]
-        puts $response
-    }
-} else {
-        puts {Content-Type: text/xml;Charset=ISO-8859-1
 
-        <?xml version="1.0"?><response><error message="session invalid"/></response>}
-}
+package require http
+set url "http://127.0.0.1:$port/"
+set token [::http::geturl $url -query $postdata]
+set response [::http::data $token]
+puts "Access-Control-Allow-Origin: *"
+puts $response
+

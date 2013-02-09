@@ -13,7 +13,7 @@ Achtung: Eine Installation der WebAPI ohne Authentifizierung eröffnet jedem der 
 
 Die Nutzung dieser Software erfolgt auf eigenes Risiko. Der Author dieser Software kann für eventuell auftretende Folgeschäden nicht haftbar gemacht werden!
 
-© 2012, 2013 hobbyquaker https://github.com/hobbyquaker
+© 2013 hobbyquaker https://github.com/hobbyquaker
 
 Diese Software ist freie Software. Sie können sie unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, gemäß Version 3 der Lizenz. Die Veröffentlichung dieser Software erfolgt in der Hoffnung, daß sie Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.
 

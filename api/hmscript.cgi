@@ -79,6 +79,7 @@ catch {
 }
 
 puts "Content-Type: text/$content;Charset=ISO-8859-1"
+puts "Access-Control-Allow-Origin: *"
 puts ""
 
 

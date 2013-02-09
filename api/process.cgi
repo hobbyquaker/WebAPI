@@ -72,6 +72,7 @@ set ausgabe ""
 set fehler ""
 
 puts "Content-Type: text/$content;Charset=ISO-8859-1"
+puts "Access-Control-Allow-Origin: *"
 puts ""
 
 append script "\nexit"
