@@ -46,6 +46,7 @@ Siehe auch upload-test.html
 * path - der Pfad wo die Datei abgelegt werden soll (mit abschließendem Slash!)
 * overwrite - true/false - Wenn Du true werden evtl. vorhandene Dateien überschrieben
 * session (nur in Variante mit Authentifizierung)
+
 #### Parameter (POST)
 * file - der Dateiupload 
 
