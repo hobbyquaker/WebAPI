@@ -1,6 +1,4 @@
-# WebAPI
-
-HomeMatic Addon
+# HomeMatic WebAPI Addon
 
 API zum Ausführen von Scripten, Prozessen, HTTP-POST-Requests und XML RPC Calls sowie zum Upload von Dateien auf der HomeMatic CCU, speziell auf die Anforderungen von Web-Anwendungen ausgelegt.
 
@@ -19,10 +17,10 @@ Erwartet das Ausgabeformat im Querystring sowie ein Homematic Script als POST Da
 Mögliche Ausgabeformate: xml, json, html, plain
 Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
 Beispielaufruf:
-  hmscript.cgi?content=json
+    hmscript.cgi?content=json
 
 Debug-Modus: ein Aufruf mit
-  hmscript.cgi?debug=true
+    hmscript.cgi?debug=true
 erzeugt eine Ausgabe die alle Variablen beinhaltet
 
 ### process.cgi
@@ -30,9 +28,9 @@ Erwartet den Prozess und das Ausgabeformat im Querystring sowie STDIN als POST D
 Mögliche Ausgabeformate: xml, json, html, plain
 Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
 Beispielaufruf:
-  process.cgi?content=plain&process=/bin/sh
+    process.cgi?content=plain&process=/bin/sh
 Debug-Modus: ein Aufruf mit
-  process.cgi?debug=true
+    process.cgi?debug=true
 erzeugt eine Ausgabe die auch STDERR enthält
 
 ### tclscript.cgi
