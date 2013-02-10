@@ -1,5 +1,7 @@
 #!/bin/tclsh
 
+#   WebAPI Version 1.0
+#
 #   xmlrpc.cgi
 #   Proxy für Zugriff auf XMLRPC via Port 80
 #   11'2012 https://github.com/hobbyquaker

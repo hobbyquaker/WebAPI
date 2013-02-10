@@ -2,7 +2,7 @@
 
 #   hmscript.cgi
 #   Ausführen eines Homematic Scripts
-#   11'2012 https://github.com/hobbyquaker
+#   2'2013 https://github.com/hobbyquaker
 #
 #   Erwartet das Ausgabeformat im Querystring sowie ein Homematic Script als POST Daten
 #   Mögliche Ausgabeformate: xml, json, html, plain

@@ -2,7 +2,7 @@
 
 #   process.cgi
 #   Ausführen eines Prozesses
-#   11'2012 https://github.com/hobbyquaker
+#   2'2013 https://github.com/hobbyquaker
 #
 #
 #   Erwartet den Prozess und das Ausgabeformat im Querystring sowie STDIN als POST Daten
