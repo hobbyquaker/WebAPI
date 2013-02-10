@@ -5,14 +5,7 @@
 #   2'2013 https://github.com/hobbyquaker
 #
 #
-#   Erwartet den Prozess und das Ausgabeformat im Querystring sowie STDIN als POST Daten
-#   Mögliche Ausgabeformate: xml, json, html, plain
-#       Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen,
-#       die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
-#   Beispielaufruf: process.cgi?content=plain&process=/bin/sh
-#
-#   Debug-Modus: ein Aufruf mit process.cgi?debug=true erzeugt eine Ausgabe die auch STDERR enthält
-#
+
 
 
 load tclrega.so

@@ -18,9 +18,26 @@ Alle Scripte senden den HTTP-Header "Access-Control-Allow-Origin: *" - d.h. die 
 
 hmscript.cgi
 ------------
+Erwartet das Ausgabeformat im Querystring sowie ein Homematic Script als POST Daten
+Mögliche Ausgabeformate: xml, json, html, plain
+Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
+Beispielaufruf:
+  hmscript.cgi?content=json
+
+Debug-Modus: ein Aufruf mit
+  hmscript.cgi?debug=true
+erzeugt eine Ausgabe die alle Variablen beinhaltet
 
 process.cgi
 -----------
+Erwartet den Prozess und das Ausgabeformat im Querystring sowie STDIN als POST Daten
+Mögliche Ausgabeformate: xml, json, html, plain
+Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
+Beispielaufruf:
+  process.cgi?content=plain&process=/bin/sh
+Debug-Modus: ein Aufruf mit
+  process.cgi?debug=true
+erzeugt eine Ausgabe die auch STDERR enthält
 
 tclscript.cgi
 -------------

@@ -4,13 +4,6 @@
 #   Ausführen eines Homematic Scripts
 #   2'2013 https://github.com/hobbyquaker
 #
-#   Erwartet das Ausgabeformat im Querystring sowie ein Homematic Script als POST Daten
-#   Mögliche Ausgabeformate: xml, json, html, plain
-#       Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen,
-#       die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
-#   Beispielaufruf: hmscript.cgi?content=json
-#
-#   Debug-Modus: ein Aufruf mit hmscript.cgi?debug=true erzeugt eine Ausgabe die alle Variablen beinhaltet
 #
 
 
