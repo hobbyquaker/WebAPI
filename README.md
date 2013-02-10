@@ -1,6 +1,6 @@
 # HomeMatic WebAPI Addon
 
-API zum Ausführen von Scripten, Prozessen, HTTP-POST-Requests und XML RPC Calls sowie zum Upload von Dateien auf der HomeMatic CCU, speziell auf die Anforderungen von Web-Anwendungen ausgelegt.
+API zum Ausführen von Scripten, Prozessen, XML RPC und anderen HTTP-POST-Requests sowie zum Upload von Dateien auf der HomeMatic CCU, speziell auf die Anforderungen von Web-Anwendungen ausgelegt.
 
 Die WebAPI steht in zwei Varianten zur Verfügung, einmal mit Authentifizierung (webapi_auth.tar.gz), einmal ohne (webapi.tar.gz).
 
@@ -9,7 +9,7 @@ Achtung: Eine Installation der WebAPI ohne Authentifizierung eröffnet jedem der
 
 ## Dokumentation
 Alle Scripte senden den HTTP-Header "Access-Control-Allow-Origin: *" - d.h. die Scripte können ohne Beschränkungen durch die "Same Origin Policy" von jedem Browser per XHR aufgerufen werden.
-
+Hmscript.cgi und xmlrpc.cgi können quasi auch als "Proxy" betrachtet werden der es ermöglicht diese Kommunikation über Port 80/443 der CCU abzuwickeln und so das Problem mit der Same Origin Policy zu umgehen. Proxy.cgi eröffnet darüberhinaus die Möglichkeit beliebige HTTP POST Requests per XHR mit der CCU als Proxy durchzuführen.
 
 
 ### hmscript.cgi
