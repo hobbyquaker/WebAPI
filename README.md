@@ -22,7 +22,8 @@ Erwartet das Homematic Script als POST Daten und gibt die Script-Ausgabe zurück
 
 
 ### process.cgi
-Startet beliebige Prozesse auf der CCU, übergibt die POST-Daten als STDIN und gibt STDOUT zurück  
+Startet beliebige Prozesse auf der CCU, übergibt die POST-Daten als STDIN und gibt STDOUT zurück.  
+Durch Umleiten der Ausgabe/Eingabe lassen sich hiermit auch Dateien auf der CCU lesen oder schreiben.
 
 #### Paramter
 * content - das Ausgabeformat (xml/json/html/plain) - Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
@@ -31,14 +32,22 @@ Startet beliebige Prozesse auf der CCU, übergibt die POST-Daten als STDIN und g
 
 
 ### tclscript.cgi
+Erwartet das TCL Script als POST Daten und gibt die Script-Ausgabe zurück
+
+#### Paramter (Querystring)
+* content - das Ausgabeformat (xml/json/html/plain) - Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
+* session (nur in Variante mit Authentifizierung)
 
 ### upload.cgi
 Dient dazu Dateien per HTTP POST auf die CCU hochzuladen. 
+Siehe auch upload-test.html
+
 #### Paramater (Querystring)
 * path - der Pfad wo die Datei abgelegt werden soll (mit abschließendem Slash!)
 * overwrite - true/false - Wenn Du true werden evtl. vorhandene Dateien überschrieben
 * session (nur in Variante mit Authentifizierung)
-
+#### Parameter (POST)
+* file - der Dateiupload 
 ### version.cgi
 Gibt die Version und die Variante (mit oder ohne Authentifizierung) im JSON Format zurück
 
@@ -47,9 +56,12 @@ Dient als Proxy um XML RPC via Port 80 bzw 443 ausführen zu können.
 #### Paramater (Querystring)
 * port - der Zielport (2000/2001/2002)
 * session (nur in Variante mit Authentifizierung)
+
+
 ### proxy.cgi
-Dient dazu unter Umgehung der "Same Origin Policy" (ein Sicherheitsmerkmal moderner Browser) XHR POST Requests an beliebige URLs zu stellen
+Dient dazu unter Umgehung der "Same Origin Policy" (ein Sicherheitsmerkmal moderner Browser) XHR POST Requests an beliebige URLs zu stellen.  
 Querystring und POST-Daten werden unverändert durchgereicht.
+
 #### Paramter (Querystring)
 * hmwa_url - die Aufzurufende URL
 * hmwa_session (nur in Variante mit Authentifizierung)
@@ -77,6 +89,8 @@ Beendet eine Session
 Erneuert eine Session. Sollte in Intervallen kürzer als der in der CCU konfigurierte Session-Timeout aufgerufen werden
 #### Parameter (Querystring)
 * session
+
+
 ## Lizenz
 
 Die Nutzung dieser Software erfolgt auf eigenes Risiko. Der Author dieser Software kann für eventuell auftretende Folgeschäden nicht haftbar gemacht werden!
