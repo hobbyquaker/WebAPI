@@ -48,6 +48,8 @@ Siehe auch upload-test.html
 * session (nur in Variante mit Authentifizierung)
 #### Parameter (POST)
 * file - der Dateiupload 
+
+
 ### version.cgi
 Gibt die Version und die Variante (mit oder ohne Authentifizierung) im JSON Format zurück
 
