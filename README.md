@@ -1,5 +1,4 @@
-WebAPI
-======
+# WebAPI
 
 HomeMatic Addon
 
@@ -10,14 +9,12 @@ Die WebAPI steht in zwei Varianten zur Verfügung, einmal mit Authentifizierung (
 Achtung: Eine Installation der WebAPI ohne Authentifizierung eröffnet jedem der Port 80 (http) bzw 443 (https) erreichen kann die Möglichkeit Scripte auf der HomeMatic CCU auszuführen. (Sicherheit ähnlich wie bei der "XML API")
 
 
-Dokumentation
-=============
+# Dokumentation
 Alle Scripte senden den HTTP-Header "Access-Control-Allow-Origin: *" - d.h. die Scripte können ohne Beschränkungen durch die "Same Origin Policy" von jedem Browser per XHR aufgerufen werden.
 
 
 
-hmscript.cgi
-------------
+## hmscript.cgi
 Erwartet das Ausgabeformat im Querystring sowie ein Homematic Script als POST Daten
 Mögliche Ausgabeformate: xml, json, html, plain
 Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
@@ -28,8 +25,7 @@ Debug-Modus: ein Aufruf mit
   hmscript.cgi?debug=true
 erzeugt eine Ausgabe die alle Variablen beinhaltet
 
-process.cgi
------------
+## process.cgi
 Erwartet den Prozess und das Ausgabeformat im Querystring sowie STDIN als POST Daten
 Mögliche Ausgabeformate: xml, json, html, plain
 Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
@@ -39,35 +35,27 @@ Debug-Modus: ein Aufruf mit
   process.cgi?debug=true
 erzeugt eine Ausgabe die auch STDERR enthält
 
-tclscript.cgi
--------------
+## tclscript.cgi
 
-upload.cgi
-----------
+## upload.cgi
 
-version.cgi
------------
+## version.cgi
 
-xmlrpc.cgi
-----------
+## xmlrpc.cgi
 
-proxy.cgi
----------
+## proxy.cgi
 
-login.cgi
----------
+## login.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
-logout.cgi
-----------
+## logout.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
-renew.cgi
----------
+## renew.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
 
-
+# Lizenz
 
 Die Nutzung dieser Software erfolgt auf eigenes Risiko. Der Author dieser Software kann für eventuell auftretende Folgeschäden nicht haftbar gemacht werden!
 

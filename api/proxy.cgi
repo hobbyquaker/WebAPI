@@ -8,6 +8,7 @@
 
 
 load tclrega.so
+set querystring ""
 
 catch {
   set input $env(QUERY_STRING)
@@ -16,11 +17,11 @@ catch {
   foreach pair $pairs {
     if {0 != [regexp "^(\[^=]*)=(.*)$" $pair dummy varname val]} {
       set $varname $val
-      if {$varname == "hmwa_urls"} {
+      if {$varname == "hmwa_url"} {
         set url "$val?"
 
       } else {
-        append querystring "$varname=$val"
+        append querystring "&$varname=$val"
       }
       set first 0
     }
@@ -30,11 +31,14 @@ append url $querystring
 set postdata [read stdin]
 
 
+
 package require http
 
-set token [::http::geturl $url -query $postdata]
+set token [::http::geturl $url] #-query $postdata]
 set response [::http::data $token]
 puts "Access-Control-Allow-Origin: *"
 puts ""
 puts $response
+puts $querystring
+puts $url
 
