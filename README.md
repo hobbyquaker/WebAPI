@@ -1,67 +1,106 @@
-# WebAPI
+# HomeMatic WebAPI Addon
 
-HomeMatic Addon
+API zum Ausf√ºhren von Scripten, Prozessen, XML RPC und anderen HTTP-POST-Requests sowie zum Upload von Dateien auf der HomeMatic CCU, speziell auf die Anforderungen von Web-Anwendungen ausgelegt.
 
-API zum Ausf¸hren von Scripten, Prozessen, HTTP-POST-Requests und XML RPC Calls sowie zum Upload von Dateien auf der HomeMatic CCU, speziell auf die Anforderungen von Web-Anwendungen ausgelegt.
+Die WebAPI steht in zwei Varianten zur Verf√ºgung, einmal mit Authentifizierung (webapi_auth.tar.gz), einmal ohne (webapi.tar.gz).
 
-Die WebAPI steht in zwei Varianten zur Verf¸gung, einmal mit Authentifizierung (webapi_auth.tar.gz), einmal ohne (webapi.tar.gz).
-
-Achtung: Eine Installation der WebAPI ohne Authentifizierung erˆffnet jedem der Port 80 (http) bzw 443 (https) erreichen kann die Mˆglichkeit Scripte auf der HomeMatic CCU auszuf¸hren. (Sicherheit ‰hnlich wie bei der "XML API")
+Achtung: Eine Installation der WebAPI ohne Authentifizierung er√∂ffnet jedem der Port 80 (http) bzw 443 (https) erreichen kann die M√∂glichkeit Scripte auf der HomeMatic CCU auszuf√ºhren. (Sicherheit √§hnlich wie bei der "XML API")
 
 
-# Dokumentation
-Alle Scripte senden den HTTP-Header "Access-Control-Allow-Origin: *" - d.h. die Scripte kˆnnen ohne Beschr‰nkungen durch die "Same Origin Policy" von jedem Browser per XHR aufgerufen werden.
+## Dokumentation
+Alle Scripte senden den HTTP-Header "Access-Control-Allow-Origin: *" - d.h. die Scripte k√∂nnen ohne Beschr√§nkungen durch die "Same Origin Policy" in Browser-Anwedungen aufgerufen werden.
+Hmscript.cgi und xmlrpc.cgi k√∂nnen quasi auch als "Proxy" betrachtet werden der es erm√∂glicht XML RPC und Remote Script √ºber Port 80/443 der CCU abzuwickeln und so das Problem mit der Same Origin Policy zu umgehen. Proxy.cgi er√∂ffnet dar√ºberhinaus die M√∂glichkeit beliebige HTTP POST Requests per XHR mit der CCU als Proxy durchzuf√ºhren.
 
 
+### hmscript.cgi
+Erwartet das Homematic Script als POST Daten und gibt die Script-Ausgabe zur√ºck
 
-## hmscript.cgi
-Erwartet das Ausgabeformat im Querystring sowie ein Homematic Script als POST Daten
-Mˆgliche Ausgabeformate: xml, json, html, plain
-Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenst‰ndig erzeugt werden.
-Beispielaufruf:
-  hmscript.cgi?content=json
+#### Paramter (Querystring)
+* content - das Ausgabeformat (xml/json/html/plain) - Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenst√§ndig erzeugt werden.
+* debug - true/false - erzeugt eine Ausgabe die alle Variablen enth√§lt (√§hnlich Remote Script via Port 8181)
+* session (nur in Variante mit Authentifizierung)
 
-Debug-Modus: ein Aufruf mit
-  hmscript.cgi?debug=true
-erzeugt eine Ausgabe die alle Variablen beinhaltet
 
-## process.cgi
-Erwartet den Prozess und das Ausgabeformat im Querystring sowie STDIN als POST Daten
-Mˆgliche Ausgabeformate: xml, json, html, plain
-Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenst‰ndig erzeugt werden.
-Beispielaufruf:
-  process.cgi?content=plain&process=/bin/sh
-Debug-Modus: ein Aufruf mit
-  process.cgi?debug=true
-erzeugt eine Ausgabe die auch STDERR enth‰lt
+### process.cgi
+Startet beliebige Prozesse auf der CCU, √ºbergibt die POST-Daten als STDIN und gibt STDOUT zur√ºck.  
+Durch Umleiten der Ausgabe/Eingabe lassen sich hiermit auch Dateien auf der CCU lesen oder schreiben.
 
-## tclscript.cgi
+#### Paramter
+* content - das Ausgabeformat (xml/json/html/plain) - Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenst√§ndig erzeugt werden.
+* debug - true/false - erzeugt eine Ausgabe die auch STDERR enth√§lt
+* session (nur in Variante mit Authentifizierung)
 
-## upload.cgi
 
-## version.cgi
+### tclscript.cgi
+Erwartet das TCL Script als POST Daten und gibt die Script-Ausgabe zur√ºck
 
-## xmlrpc.cgi
+#### Paramter (Querystring)
+* content - das Ausgabeformat (xml/json/html/plain) - Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenst√§ndig erzeugt werden.
+* session (nur in Variante mit Authentifizierung)
 
-## proxy.cgi
+### upload.cgi
+Dient dazu Dateien per HTTP POST auf die CCU hochzuladen. 
+Siehe auch upload-test.html
 
-## login.cgi
+#### Paramater (Querystring)
+* path - der Pfad wo die Datei abgelegt werden soll (mit abschlie√üendem Slash!)
+* overwrite - true/false - Wenn Du true werden evtl. vorhandene Dateien √ºberschrieben
+* session (nur in Variante mit Authentifizierung)
+
+#### Parameter (POST)
+* file - der Dateiupload 
+
+
+### version.cgi
+Gibt die Version und die Variante (mit oder ohne Authentifizierung) im JSON Format zur√ºck
+
+### xmlrpc.cgi
+Dient als Proxy um XML RPC via Port 80 bzw 443 ausf√ºhren zu k√∂nnen. 
+#### Paramater (Querystring)
+* port - der Zielport (2000/2001/2002)
+* session (nur in Variante mit Authentifizierung)
+
+
+### proxy.cgi
+Dient dazu unter Umgehung der "Same Origin Policy" (ein Sicherheitsmerkmal moderner Browser) XHR POST Requests an beliebige URLs zu stellen.  
+Querystring und POST-Daten werden unver√§ndert durchgereicht.
+
+#### Paramter (Querystring)
+* hmwa_url - die Aufzurufende URL
+* hmwa_session (nur in Variante mit Authentifizierung)
+
+### login.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
-## logout.cgi
+Eine Session er√∂ffnen. Gibt die Session-ID zur√ºck
+
+#### Paramter (POST)
+* username 
+* password
+
+### logout.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
-## renew.cgi
+Beendet eine Session
+
+#### Parameter (Querystring)
+* session
+
+### renew.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
+Erneuert eine Session. Sollte in Intervallen k√ºrzer als der in der CCU konfigurierte Session-Timeout aufgerufen werden
+#### Parameter (Querystring)
+* session
 
-# Lizenz
 
-Die Nutzung dieser Software erfolgt auf eigenes Risiko. Der Author dieser Software kann f¸r eventuell auftretende Folgesch‰den nicht haftbar gemacht werden!
+## Lizenz
 
-© 2012, 2013 hobbyquaker https://github.com/hobbyquaker
+Die Nutzung dieser Software erfolgt auf eigenes Risiko. Der Author dieser Software kann f√ºr eventuell auftretende Folgesch√§den nicht haftbar gemacht werden!
 
-Diese Software ist freie Software. Sie kˆnnen sie unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation verˆffentlicht, weitergeben und/oder modifizieren, gem‰ﬂ Version 3 der Lizenz. Die Verˆffentlichung dieser Software erfolgt in der Hoffnung, daﬂ sie Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT F‹R EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.
+¬© 2012, 2013 hobbyquaker https://github.com/hobbyquaker
+
+Diese Software ist freie Software. Sie k√∂nnen sie unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation ver√∂ffentlicht, weitergeben und/oder modifizieren, gem√§√ü Version 3 der Lizenz. Die Ver√∂ffentlichung dieser Software erfolgt in der Hoffnung, da√ü sie Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT F√úR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.
 
 HomeMatic und das HomeMatic Logo sind eingetragene Warenzeichen der eQ-3 AG
 
