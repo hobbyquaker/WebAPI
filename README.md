@@ -39,8 +39,13 @@ Erwartet das TCL Script als POST Daten und gibt die Script-Ausgabe zurück
 * session (nur in Variante mit Authentifizierung)
 
 ### upload.cgi
-Dient dazu Dateien per HTTP POST auf die CCU hochzuladen. 
-Siehe auch upload-test.html
+Dient dazu Dateien per HTTP POST auf die CCU hochzuladen. Siehe auch upload-test.html
+
+#### Parameter (Querstring)
+* overwrite - true/false - vorhandene Dateien überschreiben
+
+#### Parameter (POST)
+* file - Der Dateiupload
 
 #### Paramater (Querystring)
 * path - der Pfad wo die Datei abgelegt werden soll (mit abschließendem Slash!)
