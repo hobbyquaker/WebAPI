@@ -2,7 +2,7 @@
 rm -r tmp
 mkdir -p tmp/webapi
 
-cp -a api_auth/* tmp/webapi/
+cp -a webapi_auth/* tmp/webapi/
 cp dev/update_script tmp/
 cp dev/hq-webapi_auth tmp/
 cd tmp

@@ -10,7 +10,7 @@ case "$1" in
         echo "Info: <b>WebAPI</b>"
         echo "Info: mit Authentifizierung"
         echo "Name: WebAPI"
-        echo "Version: 0.9.0"
+        echo "Version: 0.0.0"
         echo "Operations: uninstall"
         ;;
 	uninstall)
