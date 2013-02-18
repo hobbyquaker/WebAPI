@@ -7,12 +7,12 @@ Die WebAPI steht in zwei Varianten zur Verfügung, einmal mit Authentifizierung 
 Achtung: Eine Installation der WebAPI ohne Authentifizierung eröffnet jedem der Port 80 (http) bzw 443 (https) erreichen kann die Möglichkeit Scripte auf der HomeMatic CCU auszuführen. (Sicherheit ähnlich wie bei der "XML API")
 
 
-## Dokumentation
+# Dokumentation
 Alle Scripte senden den HTTP-Header "Access-Control-Allow-Origin: *" - d.h. die Scripte können ohne Beschränkungen durch die "Same Origin Policy" in Browser-Anwedungen aufgerufen werden.
 Hmscript.cgi und xmlrpc.cgi können quasi auch als "Proxy" betrachtet werden der es ermöglicht XML RPC und Remote Script über Port 80/443 der CCU abzuwickeln und so das Problem mit der Same Origin Policy zu umgehen. Proxy.cgi eröffnet darüberhinaus die Möglichkeit beliebige HTTP POST Requests per XHR mit der CCU als Proxy durchzuführen.
 
 
-### hmscript.cgi
+## hmscript.cgi
 Erwartet das Homematic Script als POST Daten und gibt die Script-Ausgabe zurück
 
 #### Paramter (Querystring)
@@ -21,7 +21,7 @@ Erwartet das Homematic Script als POST Daten und gibt die Script-Ausgabe zurück
 * session (nur in Variante mit Authentifizierung)
 
 
-### process.cgi
+## process.cgi
 Startet beliebige Prozesse auf der CCU, übergibt die POST-Daten als STDIN und gibt STDOUT zurück.  
 Durch Umleiten der Ausgabe/Eingabe lassen sich hiermit auch Dateien auf der CCU lesen oder schreiben.
 
@@ -31,21 +31,15 @@ Durch Umleiten der Ausgabe/Eingabe lassen sich hiermit auch Dateien auf der CCU 
 * session (nur in Variante mit Authentifizierung)
 
 
-### tclscript.cgi
+## tclscript.cgi
 Erwartet das TCL Script als POST Daten und gibt die Script-Ausgabe zurück
 
 #### Paramter (Querystring)
 * content - das Ausgabeformat (xml/json/html/plain) - Diese Angabe dient lediglich dazu einen passenden Header und passende Fehlermeldungen zu erzeugen, die Ausgabe selbst muss im TCL Script eigenständig erzeugt werden.
 * session (nur in Variante mit Authentifizierung)
 
-### upload.cgi
+## upload.cgi
 Dient dazu Dateien per HTTP POST auf die CCU hochzuladen. Siehe auch upload-test.html
-
-#### Parameter (Querstring)
-* overwrite - true/false - vorhandene Dateien überschreiben
-
-#### Parameter (POST)
-* file - Der Dateiupload
 
 #### Paramater (Querystring)
 * path - der Pfad wo die Datei abgelegt werden soll (mit abschließendem Slash!)
@@ -56,17 +50,17 @@ Dient dazu Dateien per HTTP POST auf die CCU hochzuladen. Siehe auch upload-test
 * file - der Dateiupload 
 
 
-### version.cgi
+## version.cgi
 Gibt die Version und die Variante (mit oder ohne Authentifizierung) im JSON Format zurück
 
-### xmlrpc.cgi
+## xmlrpc.cgi
 Dient als Proxy um XML RPC via Port 80 bzw 443 ausführen zu können. 
 #### Paramater (Querystring)
 * port - der Zielport (2000/2001/2002)
 * session (nur in Variante mit Authentifizierung)
 
 
-### proxy.cgi
+## proxy.cgi
 Dient dazu unter Umgehung der "Same Origin Policy" (ein Sicherheitsmerkmal moderner Browser) XHR POST Requests an beliebige URLs zu stellen.  
 Querystring und POST-Daten werden unverändert durchgereicht.
 
@@ -74,7 +68,7 @@ Querystring und POST-Daten werden unverändert durchgereicht.
 * hmwa_url - die Aufzurufende URL
 * hmwa_session (nur in Variante mit Authentifizierung)
 
-### login.cgi
+## login.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
 Eine Session eröffnen. Gibt die Session-ID zurück
@@ -83,7 +77,7 @@ Eine Session eröffnen. Gibt die Session-ID zurück
 * username 
 * password
 
-### logout.cgi
+## logout.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
 Beendet eine Session
@@ -91,7 +85,7 @@ Beendet eine Session
 #### Parameter (Querystring)
 * session
 
-### renew.cgi
+## renew.cgi
 (nur in Variante mit Authentifizierung vorhanden)
 
 Erneuert eine Session. Sollte in Intervallen kürzer als der in der CCU konfigurierte Session-Timeout aufgerufen werden
@@ -99,7 +93,7 @@ Erneuert eine Session. Sollte in Intervallen kürzer als der in der CCU konfigur
 * session
 
 
-## Lizenz
+# Lizenz
 
 Die Nutzung dieser Software erfolgt auf eigenes Risiko. Der Author dieser Software kann für eventuell auftretende Folgeschäden nicht haftbar gemacht werden!
 
