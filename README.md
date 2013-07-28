@@ -1,3 +1,6 @@
+# Projekt auf Eis gelegt, geht teilweise in https://github.com/hobbyquaker/ccu.io auf.
+
+
 # HomeMatic WebAPI Addon
 
 API zum Ausführen von Scripten, Prozessen, XML RPC und anderen HTTP-POST-Requests sowie zum Upload von Dateien auf der HomeMatic CCU, speziell auf die Anforderungen von Web-Anwendungen ausgelegt.
